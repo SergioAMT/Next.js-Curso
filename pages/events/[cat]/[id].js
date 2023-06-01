@@ -1,7 +1,7 @@
-const EventPage = () => {
+const SingleEvent = () => {
     return <>
     <h1>Our single event</h1>
     </>
 }
 
-export default EventPage;
+export default SingleEvent;
