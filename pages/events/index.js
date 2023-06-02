@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@/app/components/header/header';
 import Image from 'next/image';
 import Link from 'next/link';
 

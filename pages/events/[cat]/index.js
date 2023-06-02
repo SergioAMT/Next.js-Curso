@@ -1,3 +1,4 @@
+import { HeaderComponent } from '@/app/components/header/header';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,7 +9,7 @@ const EventsCatPage = ({ data, pageName }) => {
             <div>
                 {data.map(ev => (
                     <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`}
-                    legacyBehavior>
+                        legacyBehavior>
                         <a>
                             <Image alt={ev.title} width={300} height={300} src={ev.image} />
                             <h2> {ev.title} </h2>
