@@ -1,3 +1,4 @@
+import { HomePage } from '@/app/components/home/home-page';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,18 +16,13 @@ export default function Home({ data }) {
     <div>
       <header>
         <nav>
-          <img />
-          <a href='/'>Home</a>
-          <a href='/events'>Events</a>
-          <a href='/about-us'>About Us</a>
+          <Link href='/' legacyBehavior><a >Home</a></Link>
+          <Link href='/events' legacyBehavior><a >Events</a></Link>
+          <Link href='/about-us' legacyBehavior><a >About Us</a></Link>
         </nav>
       </header>
 
-      {data.map(ev => 
-      <Link key={ev.id} href={`/events/${ev.id}`} legacyBehavior>
-      <a> <Image width={300} height={300} src=
-        {ev.image} /> <h2>{ev.title}</h2> <p>{ev.description}</p></a>
-        </Link>)}
+     <HomePage data={data}></HomePage>
 
 
     </div>
