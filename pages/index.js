@@ -1,5 +1,3 @@
-import { FooterPage } from '@/app/components/footer/footer';
-import { HeaderComponent } from '@/app/components/header/header';
 import { HomePage } from '@/app/components/home/home-page';
 
 export const getServerSideProps = async () => {
@@ -13,9 +11,7 @@ export const getServerSideProps = async () => {
 
 export default function Home({ data }) {
   return (
-    <div>
       <HomePage data={data}></HomePage>
-    </div>
   )
 }
 
