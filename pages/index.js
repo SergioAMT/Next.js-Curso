@@ -1,5 +1,6 @@
+import { FooterPage } from '@/app/components/footer/footer';
+import { HeaderComponent } from '@/app/components/header/header';
 import { HomePage } from '@/app/components/home/home-page';
-import { getLayout } from '@/app/components/getLayout';
 
 export const getServerSideProps = async () => {
   const { events_categories } = await import('/data/data.json');
@@ -13,11 +14,8 @@ export const getServerSideProps = async () => {
 export default function Home({ data }) {
   return (
     <div>
-    <h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
       <HomePage data={data}></HomePage>
-
     </div>
   )
 }
 
-Home.getLayout = getLayout;
