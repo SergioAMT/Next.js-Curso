@@ -1,15 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { HeaderComponent } from '@/app/components/header/header';
+import SingleEventPage from '@/app/components/events/single-event';
+
 
 const SingleEvent = ({ data }) => {
     return (
-        <div>
-            <Image src={data.image} width={1000} height={400} alt={data.title} />
-            <h1> {data.title} </h1>
-            <p> {data.description} </p>
-        </div>
-
+<SingleEventPage data={data}></SingleEventPage>
         )
 }
 
